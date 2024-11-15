@@ -22,7 +22,6 @@ async function fetchDataAndSave() {
         // Fetch data from the SWAPI API
         const response = await axios.get("https://swapi.dev/api/people/1/");
         const data = response.data;
-        console.log(`data received $data`);
 
         // Fetch a single person from the database and display it
         const existingPerson = await collection.findOne({ url: data.url });
